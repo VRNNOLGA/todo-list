@@ -43,13 +43,15 @@ deleteItem() {
                 <div className="main">
                     <button onClick={()=>this.addItem (this.state.userInput)} className="btn">Add</button>
                     </div>
+                    <div className="main">
                     <ul>
-                    {this.state.todoList.map((item) => (
-                    <li onClick= {this.deleteWord}>
+                    {this.state.todoList.map((item,index) => (
+                    <li key ={index} onClick= {this.deleteWord}>
                         {item}
                         </li>
                 ))}
                 </ul>
+                </div>
                 <div className="main">
                 <button onClick={() => this.deleteItem()} className="btn1">Delete</button>
                 </div>
